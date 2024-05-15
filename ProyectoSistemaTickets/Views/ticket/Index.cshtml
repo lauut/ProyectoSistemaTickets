@@ -1,0 +1,45 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<br />
+<h3>Solicitar nuevo ticket:</h3>
+<p>Complete la siguiente información</p>
+<br />
+<div style="display: flex; justify-content: center;">
+    <form>
+        <div class="row g-2">
+            <div class="col">
+                <label for="formGroupExampleInput" class="form-label">Servicio a solicitar:</label>
+                @* Agregar combobx de opciones *@
+                <input type="text" class="form-control" id="formGroupExampleInput">
+            </div>
+            <div class="col mx-4">
+                <label for="formGroupExampleInput" class="form-label">Prioridad:</label>
+                @* combobox de opciones*@
+                <input type="text" class="form-control" id="formGroupExampleInput">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col mb-3">
+                <label for="formGroupExampleInput" class="form-label">Contacto:</label>
+                <input type="text" class="form-control" id="formGroupExampleInput">
+                
+
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Descripción:</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+           
+        </div>
+        <br />
+        <div class="d-grid gap-2">
+            <button class="btn btn-dark center" type="button">Solicitar ticket</button>
+
+        </div>
+
+
+    </form>
+</div>
