@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
 using ProyectoSistemaTickets.Models;
 using System.Diagnostics;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 
 namespace ProyectoSistemaTickets.Controllers
 {
@@ -15,6 +17,11 @@ namespace ProyectoSistemaTickets.Controllers
 
         public IActionResult Index()
         {
+            if (HttpContext.Session.GetString("user") != null)
+            {
+                var datosUsuario = JsonSerializer.Deserialize<cuentas>(HttpContext.Session.GetString("user"));
+                ViewBag.NombreUsuario = datosUsuario.usuario;
+            }
             return View();
         }
 
