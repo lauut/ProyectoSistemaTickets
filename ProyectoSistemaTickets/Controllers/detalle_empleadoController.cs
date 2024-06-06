@@ -23,6 +23,8 @@ namespace ProyectoSistemaTickets.Controllers
                                   select es).ToList();
             ViewData["listadoDeEstados"] = new SelectList(listaDeEstados, "idestado", "nombre");
 
+            
+
             return View();
         }
     }

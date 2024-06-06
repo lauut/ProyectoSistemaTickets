@@ -1,11 +1,17 @@
 ﻿@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+
 *@
+
+
+
 @{
-  
+    ViewBag.Title = "Create";
 }
 
 <br/> 
+
+<br />
 
 <h1>Detalle de ticket</h1>
 <br />
@@ -21,19 +27,19 @@
             @Html.DropDownList("prioriid", ViewData["listadoDePrioridad"] as SelectList, "Asigne una prioridad", new { @class = "form-control" })
         </div>
         <div style="flex: 1;">
-            <label for="asignar">Asignar empleado:</label>
-           @Html.DropDownList("empleadoid", ViewData["listadoDeEmpleados"] as SelectList, "Asigne un empleado", new {@class="form-control"})
+            <label for="asignar">Empleado:</label>
+            @Html.DropDownList("empleadoid", ViewData["listadoDeEmpleados"] as SelectList, "Asigne una prioridad", new { @class = "form-control" })
         </div>
     </div>
     <br />
     <div class="form-group row mb-4">
         <div class="col-sm-8">
             <div>
-                @Html.Label("lblContacto","Contacto")
+                @Html.Label("lblContacto", "Contacto")
             </div>
             <div>
                 <div>
-                    @Html.TextBox("contacto","",new {@class="form-control",@placeHolder="Example:sunombre@gmail.com"})
+                    @Html.TextBox("contacto", "", new { @class = "form-control", @placeHolder = "Example:sunombre@gmail.com" })
                 </div>
             </div>
             <br />
