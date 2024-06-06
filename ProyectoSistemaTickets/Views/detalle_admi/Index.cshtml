@@ -12,17 +12,12 @@
 
     <div style="display: flex; gap: 20px; align-items: center;">
         <div style="flex: 1;">
-            <label for="nombreCliente">Nombre Cliente</label>
+            <label for="nombreCliente">Nombre Cliente:</label>
             @Html.TextBox("nombreCliente", "", new { @class = "form-control", id = "nombreCliente" })
         </div>
         <div style="flex: 1;">
-            <label>Prioridad:</label>
-            <select name="ddlpriori" id="ddlpriori">
-                <option>--Seleccionar prioridad--</option>
-                <option selected="selected">Baja</option>
-                <option>Intermedia</option>
-                <option>Alta</option>
-            </select>
+            <label for="asignar">Prioridad:</label>
+            @Html.DropDownList("prioriid", ViewData["listadoDePrioridad"] as SelectList, "Asigne una prioridad", new { @class = "form-control" })
         </div>
     </div>
     <br />
@@ -46,14 +41,10 @@
                 </div>
             </div>
             <br />
-            <label>Estado</label>
-            <select name="ddlestado" id="ddlestado">
-                <option>--Seleccionar estado--</option>
-                <option selected="selected">Reportado</option>
-                <option>En proceso</option>
-                <option>En reparación</option>
-                <option>Solucionado</option>
-            </select>
+            <div style="flex: 1;">
+                <label for="asignar">Estado:</label>
+                @Html.DropDownList("estadosid", ViewData["listadoDeEstados"] as SelectList, "Asigne un estado", new { @class = "form-control" })
+            </div>
             <br />
             <br />
             <div>
@@ -76,6 +67,9 @@
                 @Html.TextBox("fecha", "", new { @class = "form-control", @placeHolder = "yyyy/mm/dd" })
             </div>
         </div>
+    </div>
+    <div class="col-sm-4">
+        <input type="submit" class="btn btn-dark" value="Guardar" />
     </div>
 
 </form>

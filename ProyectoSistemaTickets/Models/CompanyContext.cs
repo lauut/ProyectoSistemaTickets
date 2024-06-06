@@ -10,6 +10,7 @@ namespace ProyectoSistemaTickets.Models
 
         }
 
+
         public DbSet<clientes> clientes { get; set; }
         public DbSet<ticket> ticket { get; set; }
         public DbSet<detalle_ticket> detalle_ticket { get; set; }

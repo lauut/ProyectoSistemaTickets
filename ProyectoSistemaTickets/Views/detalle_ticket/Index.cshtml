@@ -11,65 +11,6 @@
 <br />
 <form>
 
-    <div style="display: flex; gap: 20px; align-items: center;">
-        <div>
-            <label>Servicio solicitado</label>
-            @Html.TextBox("nombre", "", new { @class = "form-control", id = "nombreservicio", @readonly = "readonly" })
-        </div>
-        <div>
-            <label>Prioridad:</label>
-            @Html.TextBox("nombrepriori", "", new { @class = "form-control", @readonly = "readonly" })
-        </div>
-       
-    </div>
-    <br />
-    <div class="form-group row mb-4">
-        <div class="col-sm-8">
-            <div>
-                @Html.Label("lblContacto","Contacto")
-            </div>
-            <div>
-                <div>
-                    @Html.TextBox("contacto", "", new { @class = "form-control", @placeHolder = "Example:sunombre@gmail.com", @readonly = "readonly" })
-                </div>
-            </div>
-            <br />
-            <div>
-                @Html.Label("lblDescripcion", "Descripción")
-            </div>
-            <div>
-                <div>
-                    @Html.TextArea("descrip", "", new { @class = "form-control", @readonly = "readonly" })
-                </div>
-            </div>
-            <br />
-            <div>
-                @Html.Label("lblEstado", "Estado:")
-                @Html.TextBox("estado", "", new { @class = "form-control", @readonly = "readonly" })
-            </div>
-            
-           
-            <br />
-            <br />
-          
-            <div>
-                <div>
-                    <label>Comentario</label>
-                    @Html.TextArea("comentario", "", new { @class = "form-control", @readonly = "readonly" })
-                </div>
-            </div>
-        </div>
-    </div>
-    <br />
-    <div class="form-group row mb-4">
-        <div>
-            @Html.Label("lblFecha", "Fecha:")
-        </div>
-        <div class="col-sm-4">
-            <div>
-                @Html.TextBox("fecha", "", new { @class = "form-control", @readonly = "readonly" })
-            </div>
-        </div>
-    </div>
+    
 
 </form>
