@@ -17,39 +17,26 @@ namespace ProyectoSistemaTickets.Controllers
         }
         public IActionResult Index()
         {
-            var listaDeEmpleados = (from e in _context.empleados
-                                    select e).ToList();
-            ViewData["listadoDeEmpleados"] = new SelectList(listaDeEmpleados, "idempleado", "nombre");
+            var detalleticket = (from t in _context.ticket
+                                 join p in _context.prioridad on t.idpriori equals p.idpriori
+                                 join dt in _context.detalle_ticket on t.idticket equals dt.idticket
+                                 join e in _context.estados on dt.idestado equals e.idestado
+                                 select new
+                                 {
+                                     t.nombre,
+                                     descrip = t.descripcion,
+                                     nombrepriori = p.nombre,
+                                     //t.contacto crear campo contacto en ticket maybe;(
+                                     estado = e.nombre,
+                                     fecha = t.fechacrear
 
 
-            var listaDePrioridad = (from p in _context.prioridad
-                                    select p).ToList();
-            ViewData["listadoDePrioridad"] = new SelectList(listaDePrioridad, "idpriori", "nombre");
+                                 }).ToList();
 
-            var listaDeEstados = (from es in _context.estados
-                                    select es).ToList();
-            ViewData["listadoDeEstados"] = new SelectList(listaDeEstados, "idestado", "nombre");
-
-            return View();
-
+            return View(detalleticket);
         }
 
-        public class CreateViewModel
-        {
-            public ticket Ticket { get; set; }
-            public empleados Empleado { get; set; }
-            public clientes Cliente { get; set; }
-        }
-
-        public ActionResult Create()
-        {
-            ViewBag.listadoDePrioridad = new SelectList(_context.prioridad, "idpriori", "nombre");
-            ViewBag.listadoDeEmpleados = new SelectList(_context.empleados, "idempleado", "nombre");
-            ViewBag.listadoDeEstados = new SelectList(_context.estados, "idestado", "nombre");
-            return View();
-        }
-
-
+     
 
     }
 }

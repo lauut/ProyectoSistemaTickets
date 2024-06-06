@@ -13,21 +13,21 @@ namespace ProyectoSistemaTickets.Controllers
 
         
 
-        public IActionResult Index()
-        {
+        //public IActionResult Index()
+        //{
             
 
 
 
-            return View();
-        }
+        //    return View();
+        //}
 
        
 
         private readonly CompanyContext _context;
       
 
-        public detalle_ticketController(CompanyContext context)
+        public detalle_ticket(CompanyContext context)
         {
             _context = context;
         }
