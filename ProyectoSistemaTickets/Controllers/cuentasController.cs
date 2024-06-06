@@ -18,25 +18,6 @@ namespace ProyectoSistemaTickets.Controllers
             return View();
         }
 
-        public IActionResult ValidarUsuario(cuentas cuenta)
-        {
-
-            cuentas? usuario = (from user in _context.cuentas
-                                where user.usuario == cuenta.usuario
-                                && user.contra == cuenta.contra
-                                select user).FirstOrDefault();
-
-            if (usuario == null)
-            {
-                ViewBag.Mensaje = "Usuario o contraseña incorrectos :(";
-                return View("Index");
-
-                String datosUsuario = JsonSerializer.Serialize(usuario);
-                HttpContext.Session.SetString("user", datosUsuario);
-                return RedirectToAction("Index", "Home");
-            }
-            return View();
-        }
 
 
     }

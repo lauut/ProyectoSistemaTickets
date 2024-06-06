@@ -20,7 +20,7 @@ namespace ProyectoSistemaTickets.Controllers
             if (HttpContext.Session.GetString("user") != null)
             {
                 var datosUsuario = JsonSerializer.Deserialize<cuentas>(HttpContext.Session.GetString("user"));
-                ViewBag.NombreUsuario = datosUsuario.usuario;
+                ViewBag.NombreUsuario = datosUsuario.Usuario;
             }
             return View();
         }

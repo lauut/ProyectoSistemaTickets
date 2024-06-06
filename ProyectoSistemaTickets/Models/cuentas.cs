@@ -6,9 +6,9 @@ namespace ProyectoSistemaTickets.Models
     {
         [Key]
         public int Idcuenta { get; set; }
-        public string usuario { get; set; }
-        public string contra { get; set; }
-        public int tipo_usuario { get; set; }
+        public string? Usuario { get; set; }
+        public string? Contra { get; set; }
+        public int Tipo_usuario { get; set; }
 
         
     }
