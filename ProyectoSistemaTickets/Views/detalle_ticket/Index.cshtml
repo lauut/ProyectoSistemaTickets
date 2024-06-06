@@ -12,23 +12,15 @@
 <form>
 
     <div style="display: flex; gap: 20px; align-items: center;">
-        <div style="flex: 1;">
-            <label for="nombreCliente">Nombre Cliente</label>
-            @Html.TextBox("nombreCliente", "", new { @class = "form-control", id = "nombreCliente" })
+        <div>
+            <label>Servicio solicitado</label>
+            @Html.TextBox("nombre", "", new { @class = "form-control", id = "nombreservicio", @readonly = "readonly" })
         </div>
-        <div style="flex: 1;">
+        <div>
             <label>Prioridad:</label>
-            <select name="ddlpriori" id="ddlpriori">
-                <option>--Seleccionar prioridad--</option>
-                <option selected="selected">Baja</option>
-                <option>Intermedia</option>
-                <option>Alta</option>
-            </select>
+            @Html.TextBox("nombrepriori", "", new { @class = "form-control", @readonly = "readonly" })
         </div>
-        <div style="flex: 1;">
-            <label for="asignar">Asignar empleado</label>
-            @Html.TextBox("Asignarempleado", "", new { @class = "form-control", id = "idasignar" })
-        </div>
+       
     </div>
     <br />
     <div class="form-group row mb-4">
@@ -38,7 +30,7 @@
             </div>
             <div>
                 <div>
-                    @Html.TextBox("contacto","",new {@class="form-control",@placeHolder="Example:sunombre@gmail.com"})
+                    @Html.TextBox("contacto", "", new { @class = "form-control", @placeHolder = "Example:sunombre@gmail.com", @readonly = "readonly" })
                 </div>
             </div>
             <br />
@@ -47,26 +39,23 @@
             </div>
             <div>
                 <div>
-                    @Html.TextArea("descripcion", "", new { @class = "form-control", @placeHolder = "Enter your question or message" })
+                    @Html.TextArea("descrip", "", new { @class = "form-control", @readonly = "readonly" })
                 </div>
             </div>
             <br />
-            <label>Estado</label>
-            <select name="ddlestado" id="ddlestado">
-                <option>--Seleccionar estado--</option>
-                <option selected="selected">Reportado</option>
-                <option>En proceso</option>
-                <option>En reparación</option>
-                <option>Solucionado</option>
-            </select>
-            <br />
-            <br />
             <div>
-                @Html.Label("lblComentario", "Comentario:")
+                @Html.Label("lblEstado", "Estado:")
+                @Html.TextBox("estado", "", new { @class = "form-control", @readonly = "readonly" })
             </div>
+            
+           
+            <br />
+            <br />
+          
             <div>
                 <div>
-                    @Html.TextArea("comentario", "", new { @class = "form-control", @placeHolder = "Enter your question or message" })
+                    <label>Comentario</label>
+                    @Html.TextArea("comentario", "", new { @class = "form-control", @readonly = "readonly" })
                 </div>
             </div>
         </div>
@@ -78,7 +67,7 @@
         </div>
         <div class="col-sm-4">
             <div>
-                @Html.TextBox("fecha", "", new { @class = "form-control", @placeHolder = "yyyy/mm/dd" })
+                @Html.TextBox("fecha", "", new { @class = "form-control", @readonly = "readonly" })
             </div>
         </div>
     </div>

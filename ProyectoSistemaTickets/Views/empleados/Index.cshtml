@@ -15,23 +15,23 @@
         <div class="row g-2">
             <div class="col">
                 <label for="formGroupExampleInput" class="form-label">Nombre completo:</label>
-                <input type="text" class="form-control" id="formGroupExampleInput">
+                @Html.TextBox("nombre", "", new { @class = "form-control" })
             </div>
             <div class="col mx-4">
                 <label for="formGroupExampleInput" class="form-label">Nombre de usuario:</label>
-                <input type="text" class="form-control" id="formGroupExampleInput">
+                @Html.TextBox("usuario", "", new { @class = "form-control" })
             </div>
         </div>
         <div class="row g-2">
             <div class="col">
                 <label for="formGroupExampleInput" class="form-label">Correo:</label>
-                <input type="text" class="form-control" id="formGroupExampleInput">
+                @Html.TextBox("correo", "", new { @class = "form-control" })
                @* colocar el combox de roles*@
 
             </div>
             <div class="col mx-4">
                 <label for="formGroupExampleInput" class="form-label">Contraseña:</label>
-                <input type="text" class="form-control" id="formGroupExampleInput">
+                @Html.TextBox("contraseña", "", new { @class = "form-control" })
             </div>
         </div>
         <br />

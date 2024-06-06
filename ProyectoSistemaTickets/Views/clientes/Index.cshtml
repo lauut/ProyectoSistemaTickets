@@ -11,30 +11,30 @@
 
 
 <div style="display: flex; justify-content: center;">
-    <form>
+    <form asp-action="CrearcuentaCliente">
         <div class="row g-2">
             <div class="col">
                 <label for="formGroupExampleInput" class="form-label">Nombre completo:</label>
-                <input type="text" class="form-control" id="formGroupExampleInput">
+                 @Html.TextBox("nombre", "", new { @class = "form-control" })
             </div>
             <div class="col mx-4">
                 <label for="formGroupExampleInput" class="form-label">Nombre de usuario:</label>
-                <input type="text" class="form-control" id="formGroupExampleInput">
+                @Html.TextBox("usuario", "", new { @class = "form-control" })
             </div>
        </div>
         <div class="row g-2">
             <div class="col">
                 <label for="formGroupExampleInput" class="form-label">Correo:</label>
-                <input type="text" class="form-control" id="formGroupExampleInput">
+                @Html.TextBox("correo", "", new { @class = "form-control" })
                 <label for="formGroupExampleInput" class="form-label">Direccion:</label>
-                <input type="text" class="form-control" id="formGroupExampleInput">
+                @Html.TextBox("direc", "", new { @class = "form-control" })
                 <label for="formGroupExampleInput" class="form-label">Telefono:</label>
-                <input type="text" class="form-control" id="formGroupExampleInput">
+                @Html.TextBox("tel", "", new { @class = "form-control" })
 
             </div>
             <div class="col mx-4">
                 <label for="formGroupExampleInput" class="form-label">Contraseña:</label>
-                <input type="text" class="form-control" id="formGroupExampleInput">
+                @Html.TextBox("contra", "", new { @class = "form-control" })
             </div>
         </div>
         <br />
