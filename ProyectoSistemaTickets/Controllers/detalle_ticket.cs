@@ -1,18 +1,16 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-<<<<<<< HEAD
-using ProyectoSistemaTickets.Models;
-=======
+
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using ProyectoSistemaTickets.Models;
 using System.Net.Sockets;
->>>>>>> 8792cfd5b48e14a2095c078b24c0cdb571bc891a
+
 
 namespace ProyectoSistemaTickets.Controllers
 {
     public class detalle_ticket : Controller
     {
-<<<<<<< HEAD
+
         
 
         public IActionResult Index()
@@ -25,7 +23,7 @@ namespace ProyectoSistemaTickets.Controllers
         }
 
        
-=======
+
         private readonly CompanyContext _context;
       
 
@@ -69,6 +67,6 @@ namespace ProyectoSistemaTickets.Controllers
 
 
 
->>>>>>> 8792cfd5b48e14a2095c078b24c0cdb571bc891a
+
     }
 }
